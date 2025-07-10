@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti 💝</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>💖 Una sorpresa para ti 💖</header>
+
+<nav>
+  <button onclick="mostrarSeccion('carta')">💌 Carta</button>
+  <button onclick="mostrarSeccion('rompecabezas')">🧩 Rompecabezas</button>
+  <button onclick="mostrarSeccion('chat')">💬 Chat</button>
+  <button onclick="mostrarSeccion('secreta')">🔐 Nota Secreta</button>
+</nav>
+
+<!-- Música -->
+<div style="text-align: center;">
+  <audio id="musica" src="musica.mp3"></audio>
+  <button class="musicaBtn" onclick="document.getElementById('musica').play()">🎶 Reproducir música</button>
+</div>
+
+<!-- Sección Carta -->
+<section id="carta" class="active">
+  <h2>Mi carta para ti 💌</h2>
+  <div id="cartaTexto">Haz clic para comenzar a leer...</div>
+  <button class="respuesta" onclick="mostrarFrase()">Siguiente</button>
+</section>
+
+<!-- Sección Rompecabezas -->
+<section id="rompecabezas">
+  <h2>🧩 Nuestro rompecabezas</h2>
+  <p>Arma este rompecabezas hecho con amor 💕</p>
+  <a href="https://www.jigsawplanet.com/?rc=play&pid=2e6ade6373c8" target="_blank">
+    <button class="respuesta">Ir al rompecabezas 💘</button>
+  </a>
+</section>
+
+<!-- Sección Chat -->
+<section id="chat">
+  <h2>💬 Nuestra conversación especial</h2>
+  <div class="chatbox" id="chatBox">
+    <div class="msg yo">Hola amor ❤️</div>
+    <div class="msg yo">¿Tienes un minuto? Quiero decirte algo...</div>
+  </div>
+  <div style="text-align: center;" id="respuestas">
+    <button class="respuesta" onclick="respuesta('Claro que sí, dime ❤️')">Claro que sí, dime ❤️</button>
+    <button class="respuesta" onclick="respuesta('Siempre tengo tiempo para ti 🥺')">Siempre tengo tiempo para ti 🥺</button>
+  </div>
+</section>
+
+<!-- Sección Nota Secreta -->
+<section id="secreta">
+  <h2>🔐 Nota Secreta</h2>
+  <p>Ingresa la contraseña para ver una nota solo para ti:</p>
+  <input type="password" id="clave" placeholder="Escribe la contraseña..." class="inputPass">
+  <button class="botonPass" onclick="verNota()">Ver nota</button>
+
+  <div id="notaSecreta" style="display: none; margin-top: 30px; text-align: center;">
+    <h3 class="tituloNota">🌸 Mi confesión más profunda 🌸</h3>
+    <div class="contenidoNota">
+      Quiero que sepas que cada detalle de ti vive en mi mente y en mi corazón. 💘
+      Esta nota es un pequeño reflejo del amor tan grande que siento por ti.
+    </div>
+  </div>
+</section>
+
+<!-- Lluvia de corazones y funciones -->
+<script src="script.js"></script>
+</body>
+</html>
